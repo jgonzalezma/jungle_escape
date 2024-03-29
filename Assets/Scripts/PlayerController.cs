@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
 
     public static PlayerController Instance;
 
+    private Cronometro cronometro;
+
     private void Awake()
     {
         if(Instance != null && Instance != this) 
@@ -62,6 +64,8 @@ public class PlayerController : MonoBehaviour
         pState = GetComponent<PlayerStateList>();
 
         gravity = rb.gravityScale;
+
+        cronometro = GetComponentInChildren<Cronometro>();
     }
 
     // Update is called once per frame
